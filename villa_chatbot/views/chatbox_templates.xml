@@ -1,0 +1,28 @@
+<odoo>
+    <template id="chatbot_popup" name="Chatbot Popup" inherit_id="website.layout">
+        <xpath expr="//div[hasclass('o_footer')]" position="before">
+            <div class="fixed-bottom text-end" style="right:20px; bottom:20px; z-index:1000;">
+                <button id="chatbot-toggle" class="btn btn-primary rounded-circle p-3">
+                    <i class="fa fa-comments"></i>
+                </button>
+                
+                <div id="chatbot-container" class="d-none bg-white shadow-lg rounded-3" style="width:350px; height:500px;">
+                    <div class="chatbot-header bg-primary text-white p-3 rounded-top">
+                        <h5 class="mb-0">Trợ lý ảo Bất Động Sản</h5>
+                    </div>
+                    <div class="chatbot-body p-3" style="height:370px; overflow-y:auto;">
+                        <div class="chatbot-messages"></div>
+                    </div>
+                    <div class="chatbot-footer p-3 border-top">
+                        <div class="input-group">
+                            <input type="text" id="chatbot-input" class="form-control" placeholder="Bạn cần tìm gì...">
+                            <button class="btn btn-primary" id="chatbot-send">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
